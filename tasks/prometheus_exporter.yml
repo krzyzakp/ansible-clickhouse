@@ -1,0 +1,25 @@
+---
+
+- name: "Copy clickhouse_exporter"
+  copy:
+    src: clickhouse_exporter
+    dest: /usr/local/bin/clickhouse_exporter
+    owner: clickhouse
+    group: clickhouse
+    mode: 0755
+  notify: restart-ch-exporter
+
+- name: "Create systemd service"
+  template:
+    src: clickhouse_exporter.service
+    dest: /etc/systemd/system/
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart-ch-exporter
+ 
+- name: "Create service and enable it"
+  service:
+    name: clickhouse_exporter
+    enabled: yes
+    state: started

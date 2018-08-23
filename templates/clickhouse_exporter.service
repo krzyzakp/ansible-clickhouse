@@ -1,0 +1,14 @@
+# {{ ansible_managed }}
+[Unit]
+Description=Clickhouse Exporter for Prometheus
+Documentation=https://github.com/f1yegor/clickhouse_exporter
+After=network-online.target
+
+[Service]
+User=clickhouse
+Restart=on-failure
+ExecStart=/usr/local/bin/clickhouse_exporter -scrape_uri=http://{{ clickhouse_interserver_http_host }}:8123/
+
+[Install]
+WantedBy=multi-user.target
+

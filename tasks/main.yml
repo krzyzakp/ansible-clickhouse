@@ -34,3 +34,6 @@
 - include: config_dict.yml
   when: clickhouse_rt_isinstalled.rc == 0 and clickhouse_remove|bool == False
   tags: [config,config_dict]
+
+- include: prometheus_exporter.yml
+  when: clickhouse_prometheus_exporter == True

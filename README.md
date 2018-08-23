@@ -212,7 +212,7 @@ Tag | Action
 install | Only installation of packages
 config_sys | Only configuration system configs(users.xml and config.xml)
 config_db | Only add&remove databases
-config_sys / Only regenerate dicts
+config_sys | Only regenerate dicts
 config | config_sys+config_db
 
 License
@@ -224,7 +224,8 @@ Author Information
 ------------------
 
 [ClickHouse](https://clickhouse.yandex/docs/en/index.html) by [Yandex LLC](https://yandex.ru/company/).
+[clickhouse_exporter](https://github.com/f1yegor/clickhouse_exporter) by [F1yegor](https://github.com/f1yegor)
 
-Role by [AlexeySetevoi](https://github.com/AlexeySetevoi).
+Original role by [AlexeySetevoi](https://github.com/AlexeySetevoi), modified by [krzyzakp](https://github.com/krzyzakp)
 
 Dear contributors, thank you.

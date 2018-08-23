@@ -5,3 +5,9 @@
     name: "clickhouse-server"
     state: restarted
   become: true
+
+- name: restart-ch-exporter
+  service:
+    name: clickhouse_exporter
+    state: restarted
+  become: true
