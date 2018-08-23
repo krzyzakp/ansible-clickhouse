@@ -7,6 +7,7 @@
   with_items:
     - "{{ clickhouse_path_logdir }}"
     - "{{ clickhouse_path_configdir }}"
+    - "{{ clickhouse_path_configdir }}/conf.d"
     - "{{ clickhouse_path_tmp }}"
     - "{{ clickhouse_path_data }}"
   notify: restart-ch
