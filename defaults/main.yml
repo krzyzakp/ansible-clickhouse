@@ -80,3 +80,5 @@ clickhouse_config:
 clickhouse_dicts: []
 
 clickhouse_path_user_files: /var/lib/clickhouse/user_files/
+
+clickhouse_prometheus_exporter: False
