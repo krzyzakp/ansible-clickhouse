@@ -45,10 +45,10 @@
         </networks>
         <profile>{{ user.profile }}</profile>
         <quota>{{ user.quota }}</quota>
-        {% if user.dbs is defined %}
+        {% if user.allow_databases is defined %}
          <allow_databases>
-        {% for db in user.dbs %}
-            <database>{{ db }}</database>
+        {% for database in user.allow_databases %}
+            <database>{{ database }}</database>
         {% endfor %}
         </allow_databases>
         {% endif %}
