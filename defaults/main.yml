@@ -48,10 +48,10 @@ clickhouse_users_default:
 clickhouse_users_custom: {}
 
 clickhouse_quotas_intervals_default:
- - { duration: 3600, queries: 0, errors: 0,result_rows: 0,read_rows: 0,execution_time: 0 }
+ - { duration: 3600, queries: 0, errors: 0, result_rows: 0, read_rows: 0, execution_time: 0 }
 
 clickhouse_quotas_default:
- - { name: "default", intervals: "{{ clickhouse_quotas_intervals_default }}",comment: "Default quota - count only" }
+ - { name: "default", intervals: "{{ clickhouse_quotas_intervals_default }}", comment: "Default quota - count only" }
 
 clickhouse_quotas_custom: {}
 
