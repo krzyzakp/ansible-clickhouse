@@ -215,6 +215,15 @@ config_db | Only add&remove databases
 config_sys | Only regenerate dicts
 config | config_sys+config_db
 
+Updating clickhouse_exporter
+----------------------------
+To update clickhouse exporter, you should fetch latest version of [Clickhouse exporter repo](https://github.com/f1yegor/clickhouse_exporter) and run it's docker container. Once you did it, just copy from it file, which you need, via:
+
+```
+docker cp <container_name>:/usr/local/bin/clickhouse_exporter <repo dir>/files/clickhouse_exporter
+```
+
+
 License
 -------
 
